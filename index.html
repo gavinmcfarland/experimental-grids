@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Bulletproof Grids | Demo</title>
+  <meta name="description" content="A shadow DOM helper for creating grids with gutters">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<h1>Experimenting with bullet proof grids</h1>
+<p>The following is are examples using shadow DOM to wrap each child element of a container with wrapper divs. This then provides the offardance to create layouts which are flexible in a lot of scenarios.</p>
+
+<ol>
+    <li>Negates need to include extra divs when writing your markup</li>
+    <li>Use both pixels and percentages for guttering (margins)</li>
+    <li>No need to append extra class to last element of row</li>
+    <li>Complete freedom in styling child element, eg use borders, padding etc</li>
+    <li>Good for creating responsive layouts</li>
+    <li>Very very flexible and will accomodate a lot of layouts</li>
+</ol>
+
+<div has-gutters class="demos">
+    <div class="demo__item">
+        <h4>default</h4>
+        <div has-gutters class="block">
+            <div class="block__item">1</div>
+            <div class="block__item">1</div>
+            <div class="block__item">1</div>
+            <div class="block__item">1</div>
+        </div>
+    </div>
+
+    <div class="demo__item">
+        <h4>auto</h4>
+        <div has-gutters class="block">
+            <div class="block__item extent-auto">lorem</div>
+            <div class="block__item extent-auto">sit</div>
+            <div class="block__item extent-auto">dolor</div>
+            <div class="block__item extent-auto">consectet</div>
+        </div>
+    </div>
+
+    <div class="demo__item">
+        <h4>content</h4>
+        <div has-gutters class="block">
+            <div class="block__item extent-content">no</div>
+            <div class="block__item extent-content">lorem</div>
+            <div class="block__item extent-content">dolor</div>
+            <div class="block__item extent-content">consectet</div>
+        </div>
+    </div>
+
+    <div class="demo__item">
+        <h4>collapsed</h4>
+        <div has-gutters class="block">
+            <div class="block__item extent-0">0</div>
+            <div class="block__item extent-0">0</div>
+            <div class="block__item extent-0">0</div>
+            <div class="block__item extent-0">0</div>
+        </div>
+    </div>
+
+    <div class="demo__item">
+        <h4>fractions</h4>
+        <div has-gutters class="block">
+            <div class="block__item extent-1/4-sm">1/4</div>
+            <div class="block__item extent-1/2-sm">1/2</div>
+            <div class="block__item extent-1/4-sm">1/4</div>
+            <div class="block__item extent-1/3-sm">1/3</div>
+            <div class="block__item extent-1/3-sm">1/3</div>
+            <div class="block__item extent-1/3-sm">1/3</div>
+        </div>
+    </div>
+
+    <div class="demo__item">
+        <h4>grids</h4>
+        <div has-gutters class="block">
+            <div class="block__item extent-1/4-sm">1</div>
+            <div class="block__item extent-1/4-sm">2</div>
+            <div class="block__item extent-1/4-sm">3</div>
+            <div class="block__item extent-1/4-sm">4</div>
+            <div class="block__item extent-1/4-sm">5</div>
+            <div class="block__item extent-1/4-sm">6</div>
+            <div class="block__item extent-1/4-sm">7</div>
+            <div class="block__item extent-1/4-sm">8</div>
+        </div>
+    </div>
+
+    <div class="demo__item">
+        <h4>custom layouts</h4>
+        <div has-gutters class="block">
+            <div class="block__item extent-1/4-sm">1/4</div>
+            <div class="block__item extent-1/2-sm">1/2</div>
+            <div class="block__item extent-1/4-sm">1/4</div>
+            <div class="block__item extent-1/4-sm offset-1/4-sm">1/4</div>
+            <div class="block__item extent-1/4-sm">1/4</div>
+            <div class="block__item extent-1/4-sm">1/4</div>
+            <div class="block__item extent-1/2-sm">1/2</div>
+            <div class="block__item extent-1/4-sm offset-1/4-sm">1/4</div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="experimental-grids.js"></script></body>
+</html>
